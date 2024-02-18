@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/phone-catalog/static/css/main.7c3d528b.css",
+    "main.js": "/phone-catalog/static/js/main.94b8db1e.js",
+    "static/js/453.5aedf950.chunk.js": "/phone-catalog/static/js/453.5aedf950.chunk.js",
+    "static/media/Mont-Regular.woff": "/phone-catalog/static/media/Mont-Regular.d0e0baf48d3f04d47f65.woff",
+    "static/media/Mont-SemiBold.woff": "/phone-catalog/static/media/Mont-SemiBold.ae323bfd9be4bd96f6bc.woff",
+    "static/media/Mont-Bold.woff": "/phone-catalog/static/media/Mont-Bold.a80efdecfa3a80ec9a94.woff",
+    "static/media/Mont-Regular.woff2": "/phone-catalog/static/media/Mont-Regular.0a21ee510ccbeb3233b1.woff2",
+    "static/media/Mont-SemiBold.woff2": "/phone-catalog/static/media/Mont-SemiBold.20ac0689fc29ed1cfa13.woff2",
+    "static/media/Mont-Bold.woff2": "/phone-catalog/static/media/Mont-Bold.baa3b8993db177cf10ee.woff2",
+    "static/media/bag.svg": "/phone-catalog/static/media/bag.1962e42406793fa66f0dc11ef36e74ed.svg",
+    "static/media/heart.svg": "/phone-catalog/static/media/heart.ae6669ec231b50c8f0fe45254594fdb3.svg",
+    "static/media/Logo.svg": "/phone-catalog/static/media/Logo.c94176926904d965da98d4dbb2bcedbe.svg",
+    "static/media/home.svg": "/phone-catalog/static/media/home.d4c29e4f137b3a79235a5293536d71a0.svg",
+    "static/media/search.svg": "/phone-catalog/static/media/search.775eb3991362002694f2662fbfded352.svg",
+    "static/media/cross.svg": "/phone-catalog/static/media/cross.98d81a466b7b8c8c61139f213a2a4532.svg",
+    "static/media/plus.svg": "/phone-catalog/static/media/plus.bdaf17dadd55e73ee44a2352b143b897.svg",
+    "index.html": "/phone-catalog/index.html",
+    "static/media/minus.svg": "/phone-catalog/static/media/minus.ead1481261d6ac4ebd4cfb61a25b3f2f.svg",
+    "static/media/arrow.svg": "/phone-catalog/static/media/arrow.6ea4dc179740ba122e4477b869e7af0d.svg",
+    "main.7c3d528b.css.map": "/phone-catalog/static/css/main.7c3d528b.css.map",
+    "main.94b8db1e.js.map": "/phone-catalog/static/js/main.94b8db1e.js.map",
+    "453.5aedf950.chunk.js.map": "/phone-catalog/static/js/453.5aedf950.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c3d528b.css",
+    "static/js/main.94b8db1e.js"
+  ]
+}
