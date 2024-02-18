@@ -1,0 +1,8 @@
+@import '../../styles/utils';
+
+.ProductsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(207px, 1fr));
+  column-gap: 16px;
+  @include adaptive-value('row-gap', 40, 20);
+}

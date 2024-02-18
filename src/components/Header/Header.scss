@@ -1,0 +1,146 @@
+@import '../../styles/utils';
+
+.Header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  @include adaptive-value('height', $header-height-desktop, $header-height-mobile);
+  padding-left: 20px;
+  background-color: $c-white;
+  border-bottom: $border;
+
+  @include onTablet {
+    padding-left: 0;
+  }
+
+  &__Left {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 64px;
+
+    @include onTablet {
+      margin-left: 16px;
+    }
+  }
+
+  &__Nav {
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__Right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__Link {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptive-value('height', $header-height-desktop, $header-height-mobile);
+    aspect-ratio: 1;
+    border-left: $border;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $c-black;
+      transition-duration: $amin-time;
+    }
+
+    &:hover,
+    &--active {
+      color: $c-black;
+      
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__Quantity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    aspect-ratio: 1;
+    border: 1px solid $c-white;
+    border-radius: 50%;
+    background-color: $c-red;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0%;
+    color: $c-white;
+  }
+
+  &__Search {
+    max-width: 325px;
+    flex-grow: 1;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__Burger {
+    display: none;
+
+    @include onTablet {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptive-value('height', $header-height-desktop, $header-height-mobile);
+      aspect-ratio: 1;
+      border-right: $border;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        height: 2px;
+        width: 22px;
+        background-color: $c-black;
+        transition-duration: $amin-time;
+      }
+
+      &::before {
+        top: 50%;
+        transform: translateY(150%);
+      }
+
+      &::after {
+        top: 50%;
+        transform: translateY(-150%);
+      }
+
+      &--active {
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

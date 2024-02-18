@@ -1,0 +1,18 @@
+@import '../../styles/utils';
+
+.CartTotal {
+  height: max-content;
+  border: $border;
+  @include adaptive-value('padding', 24, 16);
+
+  &__Info {
+    display: grid;
+    justify-content: center;
+    @include adaptive-value('padding-bottom', 24, 16);
+    bottom: $border;
+  }
+
+  &__Price {
+    justify-self: center;
+  }
+}

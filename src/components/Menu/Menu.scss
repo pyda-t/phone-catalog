@@ -1,0 +1,36 @@
+@import '../../styles/utils';
+
+$menu-padding: 20px;
+$menu-padding-desktop: $header-height-desktop + 40;
+$menu-padding-mobile: $header-height-mobile + 40;
+
+.Menu {
+  display: none;
+
+  @include onTablet {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    background-color: $c-white;
+    transform: translateY(-100%);
+    transition-duration: $amin-time;
+    @include adaptive-value('padding-top', $menu-padding-desktop, $menu-padding-mobile);
+    padding-inline: $menu-padding;
+    padding-bottom: $menu-padding;
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  &__Search {
+    display: none;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+}

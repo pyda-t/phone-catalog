@@ -1,0 +1,26 @@
+@import '../../styles/utils';
+
+.ProductsSlider {
+  display: grid;
+  row-gap: 24px;
+
+  &__Top {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  &__Buttons {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 16px;
+  }
+
+  &__Slider {
+    width: 100%;
+  }
+
+  &__Slide {
+    cursor: grab;
+  }
+}

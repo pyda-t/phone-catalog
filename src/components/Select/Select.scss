@@ -1,0 +1,62 @@
+@import '../../styles/utils';
+
+.Select {
+  position: relative;
+  display: grid;
+  row-gap: 4px;
+  @extend %button-text;
+
+  &__Title {
+    @extend %secondary-text;
+    color: $c-dark-grey;
+  }
+
+  &__Field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    border: 1px solid $c-grey;
+    padding-inline: 12px;
+    transition-duration: $amin-time;
+
+    &--active {
+      border-color: $c-black;
+    }
+  }
+
+  &__Icon {
+    transform: rotate(90deg);
+    transition-duration: $amin-time;
+
+    &--active {
+      transform: rotate(-90deg);
+    }
+
+    & path {
+      fill: $c-grey;
+    }
+  }
+
+  &__Options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: 4px;
+    border: $border;
+    background-color: $c-white;
+    overflow: hidden;
+  }
+
+  &__Option {
+    padding: 6px 12px;
+    color: $c-dark-grey;
+    transition-duration: $amin-time;
+
+    &:hover {
+      color: $c-black;
+    }
+  }
+}

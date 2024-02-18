@@ -1,0 +1,15 @@
+@import '../../styles/utils';
+
+.Pagination {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 16px;
+  width: max-content;
+  margin-inline: auto;
+
+  &__Pages {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 8px;
+  }
+}

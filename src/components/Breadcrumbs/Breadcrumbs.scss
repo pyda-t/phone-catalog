@@ -1,0 +1,25 @@
+@import '../../styles/utils';
+
+.Breadcrumbs {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 8px;
+  width: max-content;
+  @extend %secondary-text;
+  color: $c-dark-grey;
+
+  &__Link {
+    color: $c-black;
+    transition-duration: $amin-time;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__Arrow {
+    & path {
+      fill: $c-grey;
+    }
+  }
+}

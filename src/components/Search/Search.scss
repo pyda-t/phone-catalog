@@ -1,0 +1,38 @@
+@import '../../styles/utils';
+
+.Search {
+  display: grid;
+  grid-template-columns: 1fr 16px;
+  align-items: center;
+  @include adaptive-value('column-gap', 24, 16);
+  width: 100%;
+  @include adaptive-value('height', $header-height-desktop, $header-height-mobile);
+  @include adaptive-value('padding-inline', 24, 16);
+  border-left: $border;
+
+  &--border {
+    border: $border;
+  }
+
+  @include onMobile {
+    max-width: 100%;
+  }
+
+  &__Input {
+    width: 100%;
+    border: none;
+    @extend %button-text;
+    color: $c-black;
+
+    &::placeholder {
+      color: $c-grey;
+    }
+  }
+
+  &__Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include square(16px);
+  }
+}

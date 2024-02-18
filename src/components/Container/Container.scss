@@ -1,0 +1,7 @@
+@import '../../styles/utils';
+
+.Container {
+  margin-inline: auto;
+  max-width: $maxWidthContainer + px;
+  @include adaptive-value('padding-inline', 40, 20);
+}

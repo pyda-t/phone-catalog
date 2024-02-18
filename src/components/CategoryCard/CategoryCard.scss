@@ -1,0 +1,22 @@
+@import '../../styles/utils';
+
+.CategoryCard {
+  &__Image {
+    display: block;
+    @include adaptive-value('margin-bottom', 24, 16);
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    transition-duration: $amin-time;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 3px 10px 5px 2px $c-black;
+    }
+  }
+
+  &__Title {
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../styles/utils';
+
+.SecondaryButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include square(40px);
+  border: 1px solid $c-grey;
+  background-color: $c-white;
+  @extend %button-text;
+  transition-duration: $amin-time;
+  
+  &:hover {
+    border-color: $c-black;
+  }
+
+  &:disabled {
+    border-color: $c-light-grey;
+
+    & path {
+      fill: $c-light-grey;
+    }
+  }
+
+  &--small {
+    @include square($secondary-button-small-size);
+  }
+
+  &--big {
+    @include square(48px);
+  }
+
+  &--banner {
+    width: 32px;
+    height: 100%;
+  }
+
+  &--selected {
+    border-color: $c-black;
+    background-color: $c-black;
+    color: $c-white;
+  }
+}

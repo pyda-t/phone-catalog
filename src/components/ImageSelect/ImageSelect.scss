@@ -1,0 +1,45 @@
+@import '../../styles/utils';
+
+.ImageSelect {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 16px;
+
+  @include onTablet {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  &__List {
+    display: grid;
+    row-gap: 16px;
+    height: max-content;
+
+    @include onTablet {
+      grid-row: 2 / 3;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 16px;
+    }
+  }
+
+  &__Button {
+    border: $border;
+    transition-duration: $amin-time;
+
+    &--selected {
+      border-color: $c-black;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__Image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+  }
+}

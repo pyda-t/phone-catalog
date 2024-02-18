@@ -1,0 +1,25 @@
+@import '../../styles/utils';
+
+.TechSpecs {
+  display: grid;
+  row-gap: 8px;
+
+  &--small {
+    @extend %secondary-text;
+  }
+
+  &__Item {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 16px;
+    justify-content: space-between;
+  }
+
+  &__Name {
+    color: $c-dark-grey;
+  }
+
+  &__Value {
+    text-align: right;
+  }
+}

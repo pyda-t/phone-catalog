@@ -1,0 +1,23 @@
+@import '../../styles/utils';
+
+.BackButton {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 4px;
+
+  &:hover {
+    .BackButton__Text {
+      scale: 1.2;
+    }
+  }
+
+  &__Text {
+    @extend %secondary-text;
+    color: $c-dark-grey;
+    transition-duration: $amin-time;
+  }
+
+  &__Icon {
+    rotate: 180deg;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../styles/utils';
+
+.CartProductsList {
+  &__Item {
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

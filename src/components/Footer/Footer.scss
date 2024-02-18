@@ -1,0 +1,29 @@
+@import '../../styles/utils';
+
+.Footer {
+  position: relative;
+  z-index: 20;
+  background-color: $c-white;
+  border-top: $border;
+
+  &__Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('height', 96, 56);
+  }
+
+  &__Link {
+    @extend %uppercase-text;
+    color: $c-dark-grey;
+    transition-duration: $amin-time;
+
+    &:hover {
+      color: $c-black;
+    }
+  }
+
+  &__Button-icon {
+    rotate: -90deg;
+  }
+}

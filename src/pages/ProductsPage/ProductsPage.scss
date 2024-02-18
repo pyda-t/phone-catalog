@@ -1,0 +1,34 @@
+@import '../../styles/utils';
+
+$desktopMarginBottom: 40;
+$mobileMarginBottom: 24;
+
+.ProductsPage {
+  &__Breadcrumbs {
+    @include adaptive-value('margin-bottom', $desktopMarginBottom, $mobileMarginBottom);
+  }
+
+  &__Title {
+    margin-bottom: 8px;
+  }
+
+  &__Count {
+    @include adaptive-value('margin-bottom', $desktopMarginBottom, $mobileMarginBottom);
+  }
+
+  &__Selects {
+    display: grid;
+    grid-template-columns: 176px 128px;
+    column-gap: 16px;
+    margin-bottom: 24px;
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+      row-gap: 8px;
+    }
+  }
+
+  &__Products {
+    @include adaptive-value('margin-bottom', $desktopMarginBottom, $mobileMarginBottom);
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../styles/utils';
+
+.Banner {
+  display: grid;
+  grid-template-columns: $secondary-button-small-size 1fr $secondary-button-small-size;
+  column-gap: 16px;
+  row-gap: 20px;
+
+  @include onMobile {
+    grid-template-columns: 1fr $secondary-button-small-size $secondary-button-small-size 1fr;
+    grid-template-rows: 1fr $secondary-button-small-size;
+  }
+
+  &__PrevButton {
+    grid-column: 1 / 2;
+
+    @include onMobile {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__Slides {
+    grid-column: 2 / 3;
+    width: 100%;
+    @include adaptive-value('height', 400, 200);
+    cursor: grab;
+
+    @include onMobile {
+      grid-column: 1 / 5;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__Img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__NextButton {
+    grid-column: 3 / 4;
+
+    @include onMobile {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__Bullets {
+    grid-column: 2 / 3;
+    justify-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 16px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__Bullet {
+    width: 15px;
+    height: 4px;
+    background-color: $c-dark-grey;
+    cursor: pointer;
+    transition-duration: $amin-time;
+
+    &:hover,
+    &--active {
+      background-color: $c-black;
+      transform: scale(1.2);
+    }
+  }
+}

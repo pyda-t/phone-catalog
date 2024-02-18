@@ -1,0 +1,57 @@
+@import '../../styles/utils';
+
+.Nav {
+  &__List {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 64px;
+
+    @include onTablet {
+      grid-auto-flow: row;
+      row-gap: 30px;
+    }
+  }
+
+  &__Link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include adaptive-value('height', $header-height-desktop, $header-height-mobile);
+    @extend %uppercase-text;
+    color: $c-dark-grey;
+    transition-duration: $amin-time;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $c-black;
+      transition-duration: $amin-time;
+    }
+
+    &:hover,
+    &--active {
+      color: $c-black;
+      
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include onTablet {
+      height: max-content;
+
+      &:hover,
+      &--active {
+        color: $c-black;
+        
+        &::after {
+          width: 0;
+        }
+      }
+    }
+  }
+}

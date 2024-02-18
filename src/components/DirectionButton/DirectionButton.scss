@@ -1,0 +1,7 @@
+@import '../../styles/utils';
+
+.DirectionButton {
+  &--prev {
+    rotate: 180deg;
+  }
+}

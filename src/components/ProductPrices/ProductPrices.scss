@@ -1,0 +1,20 @@
+@import '../../styles/utils';
+
+.ProductPrices {
+  display: flex;
+  align-items: center;
+  @extend %h2;
+
+  &__NewPrice {
+    margin-right: 8px;
+
+    &--big {
+      @extend %h1;
+    }
+  }
+
+  &__OldPrice {
+    color: $c-dark-grey;
+    text-decoration: line-through;
+  }
+}

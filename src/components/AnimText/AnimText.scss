@@ -1,0 +1,14 @@
+@import '../../styles/utils';
+
+.AnimText {
+  position: relative;
+
+  &__TextUncover {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $c-white;
+  }
+}

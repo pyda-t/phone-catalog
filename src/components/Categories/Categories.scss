@@ -1,0 +1,17 @@
+@import '../../styles/utils';
+
+.Categories {
+  display: grid;
+  @include adaptive-value('row-gap', 24, 16);
+
+  &__List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+  }
+}

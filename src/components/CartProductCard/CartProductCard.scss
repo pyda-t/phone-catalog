@@ -1,0 +1,98 @@
+@import '../../styles/utils';
+
+.CartProductCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptive-value('column-gap', 50, 24);
+  border: $border;
+  @include adaptive-value('padding', 24, 8);
+
+  @include onMobile {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__Left {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    @include adaptive-value('column-gap', 24, 16);
+
+    @include onMobile {
+      width: 100%;
+    }
+  }
+
+  &__Right {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    @include adaptive-value('column-gap', 40, 20);
+
+    @include onMobile {
+      grid-template-columns: auto 1fr;
+      width: 100%;
+      column-gap: 0;
+    }
+  }
+
+  &__DeleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include square(16px);
+    color: $c-grey;
+    transition-duration: $amin-time;
+
+    &:hover {
+      color: $c-black;
+      transform: scale(1.5);
+    }
+  }
+
+  &__Image {
+    display: block;
+    @include adaptive-value('width', 80, 40);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__Title {
+    flex-grow: 1;
+
+    @include onMobile {
+      text-align: center;
+    }
+  }
+
+  &__Buttons {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 32px;
+    width: max-content;
+  }
+
+  &__Icon {
+    color: $c-grey;
+    transition-duration: $amin-time;
+
+    &--black {
+      color: $c-black;
+    }
+  }
+
+  &__Quantity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__Price {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/utils';
+
+.Logo {
+  display: flex;
+  align-items: center;
+  transition-duration: $amin-time;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,57 @@
+%h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+%h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+%h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+%main-text {
+  font-family: Mont;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  }
+
+%secondary-text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+%button-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+%uppercase-text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}

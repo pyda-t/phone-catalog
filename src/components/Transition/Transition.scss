@@ -1,0 +1,22 @@
+@import '../../styles/utils';
+
+.Transition {
+  &__Slide-in,
+  &__Slide-out {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $c-black;
+  }
+
+  &__Slide-in {
+    transform-origin: bottom;
+  }
+
+  &__Slide-out {
+    transform-origin: top;
+  }
+}

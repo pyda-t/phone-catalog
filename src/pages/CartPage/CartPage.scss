@@ -1,0 +1,22 @@
+@import '../../styles/utils';
+
+.CartPage {
+  &__BackButton {
+    margin-bottom: 16px;
+  }
+
+  &__Title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+
+  &__Main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 16px;
+
+    @include onTablet {
+      grid-template-columns: 1fr;
+      @include adaptive-value('row-gap', 40, 20);
+    }
+  }
+}
