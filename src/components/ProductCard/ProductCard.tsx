@@ -42,7 +42,7 @@ export const ProductCard: FunctionComponent<Props> = ({ product }) => {
       >
         <img
           className="ProductCard__Image"
-          src={`/${imageUrl}`}
+          src={imageUrl}
           alt={name}
         />
       </Link>
